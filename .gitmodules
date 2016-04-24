@@ -1,0 +1,6 @@
+[submodule "ji-octopress-theme"]
+	path = ji-octopress-theme
+	url = git@github.com:ivanjovanovic/ji-octopress-theme.git
+[submodule ".themes/hpstr-theme"]
+	path = .themes/hpstr-theme
+	url = git@github.com:jez/hpstr-theme.git
