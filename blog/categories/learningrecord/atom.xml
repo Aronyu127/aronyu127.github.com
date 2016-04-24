@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Record | Aron'S Daily]]></title>
-  <link href="http://aronyu127.github.io/blog/categories/record/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Learningrecord | Aron'S Daily]]></title>
+  <link href="http://aronyu127.github.io/blog/categories/learningrecord/atom.xml" rel="self"/>
   <link href="http://aronyu127.github.io/"/>
-  <updated>2016-04-24T17:05:14+08:00</updated>
+  <updated>2016-04-24T17:10:59+08:00</updated>
   <id>http://aronyu127.github.io/</id>
   <author>
     <name><![CDATA[Aron Yu]]></name>
