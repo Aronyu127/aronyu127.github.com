@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Learning | Aron'S Daily]]></title>
+  <link href="http://aronyu127.github.io/blog/categories/learning/atom.xml" rel="self"/>
+  <link href="http://aronyu127.github.io/"/>
+  <updated>2016-04-24T17:05:14+08:00</updated>
+  <id>http://aronyu127.github.io/</id>
+  <author>
+    <name><![CDATA[Aron Yu]]></name>
+    <email><![CDATA[h093564938@hotmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[學習紀錄一]]></title>
+    <link href="http://aronyu127.github.io/blog/2016/04/24/xue-xi-ji-lu-%5B%3F%5D/"/>
+    <updated>2016-04-24T13:57:25+08:00</updated>
+    <id>http://aronyu127.github.io/blog/2016/04/24/xue-xi-ji-lu-[?]</id>
+    <content type="html"><![CDATA[<h2>Ruby</h2>
+
+<h3><mark>.underscore</h3>
+
+<pre><code>'ActiveModel'.underscore         # =&gt; "active_model"
+
+'ActiveModel::Errors'.underscore # =&gt; "active_model/errors"
+</code></pre>
+
+<p>對 <strong>string</strong> 使用</p>
+
+<p>用於切換 檔名  與路徑</p>
+
+<h3><mark>.fetch</h3>
+
+<pre><code>h = { "a" =&gt; 100, "b" =&gt; 200 }
+h.fetch("a")                            #=&gt; 100
+h.fetch("z", "go fish")                 #=&gt; "go fish"
+
+h.fetch("z") { |el| "go fish, #{el}"}   #=&gt; "go fish, z"
+</code></pre>
+
+<p>對 <strong>hash</strong> 使用</p>
+
+<p>抓出hash裡面的值  如果沒有就報錯   如果沒有但有給default
+回報default 的值
+如果沒有 但有定義後面的 code block 把搜尋的值 塞進去</p>
+
+<h2>Factroyfirl</h2>
+
+<h3><mark>sequence</h3>
+
+<pre><code>FactoryGirl.define do
+  sequence :email do |n|
+    "person#{n}@example.com"
+  end
+end
+</code></pre>
+
+<p>用於產生序列化的變數
+使用上要好於使用隨機數字-> 不會重複</p>
+]]></content>
+  </entry>
+  
+</feed>

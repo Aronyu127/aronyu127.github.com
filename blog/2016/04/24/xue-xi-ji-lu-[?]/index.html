@@ -16,10 +16,12 @@
 
 
 
-<meta name="description" content="
-">
+<meta name="description" content="Ruby .underscore 1
+2
+3
+'ActiveModel'.underscore # =&gt; "active_model" 'ActiveModel::Errors'.underscore # =&gt; "active_model/errors" 對 string 使用 &hellip;">
 
-<meta name="keywords" content=" ">
+<meta name="keywords" content="learning record ">
 
 
 <!-- http://t.co/dKP3o1e -->
@@ -34,8 +36,10 @@
     <meta name="twitter:image" content"">
   
   <meta name="twitter:title" content="學習紀錄一">
-  <meta name="twitter:description" content="
-">
+  <meta name="twitter:description" content="Ruby .underscore 1
+2
+3
+'ActiveModel'.underscore # =&gt; "active_model" 'ActiveModel::Errors'.underscore # =&gt; "active_model/errors" 對 string 使用 &hellip;">
   <meta name="twitter:creator" content="@h0935674938">
 
 
@@ -44,8 +48,10 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://aronyu127.github.io/blog/2016/04/24/xue-xi-ji-lu-%5B%3F%5D">
 <meta property="og:title" content="學習紀錄一">
-<meta property="og:description" content="
-">
+<meta property="og:description" content="Ruby .underscore 1
+2
+3
+'ActiveModel'.underscore # =&gt; "active_model" 'ActiveModel::Errors'.underscore # =&gt; "active_model/errors" 對 string 使用 &hellip;">
 
   <meta property="og:image" content="">
 
@@ -80,18 +86,18 @@
 			<a href="#">About</a>
 			<ul class="dl-submenu">
 				<li>
-					<img src="" alt="Aron Yu photo" class="author-photo">
+					<img src="/images/avatar.jpg" alt="Aron Yu photo" class="author-photo">
 					<h4>Aron Yu</h4>
-					<p></p>
+					<p>Web Developer, Rubyist</p>
 				</li>
 				
-				
+				<li>
+					<a href="mailto:h093564938@hotmail.com"><i class="fa fa-envelope"></i> Email</a>
+				</li>
 				<li>
 					<a href="https://twitter.com/h0935674938"><i class="fa fa-twitter"></i> Twitter</a>
 				</li>
-				<li>
-					<a href="https://plus.google.com/aron791227"><i class="fa fa-google-plus"></i> Google+</a>
-				</li>
+				
 				<li>
 					<a href="https://github.com/aronyu127"><i class="fa fa-github"></i> GitHub</a>
 				</li>
@@ -123,10 +129,63 @@
       </div><!-- /.header-title-wrap -->
     </header>
     <div class="entry-content">
-      
+      <h2>Ruby</h2>
+
+<h3><mark>.underscore</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>'ActiveModel'.underscore         # =&gt; "active_model"
+</span><span class='line'>
+</span><span class='line'>'ActiveModel::Errors'.underscore # =&gt; "active_model/errors"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>對 <strong>string</strong> 使用</p>
+
+<p>用於切換 檔名  與路徑</p>
+
+<h3><mark>.fetch</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
+</span><span class='line'>h.fetch("a")                            #=&gt; 100
+</span><span class='line'>h.fetch("z", "go fish")                 #=&gt; "go fish"
+</span><span class='line'>
+</span><span class='line'>h.fetch("z") { |el| "go fish, #{el}"}   #=&gt; "go fish, z"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>對 <strong>hash</strong> 使用</p>
+
+<p>抓出hash裡面的值  如果沒有就報錯   如果沒有但有給default
+回報default 的值
+如果沒有 但有定義後面的 code block 把搜尋的值 塞進去</p>
+
+<h2>Factroyfirl</h2>
+
+<h3><mark>sequence</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>FactoryGirl.define do
+</span><span class='line'>  sequence :email do |n|
+</span><span class='line'>    "person#{n}@example.com"
+</span><span class='line'>  end
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>用於產生序列化的變數
+使用上要好於使用隨機數字-> 不會重複</p>
 
       <footer class="entry-meta">
-        <span class="entry-tags"></span>
+        <span class="entry-tags"><a href="/categories/#learning" title="Pages tagged learning" class="tag">learning</a><a href="/categories/#record" title="Pages tagged record" class="tag">record</a></span>
         <span><a href="/blog/2016/04/24/xue-xi-ji-lu-%5B%3F%5D/" rel="bookmark" title="學習紀錄一">學習紀錄一</a> was published on <span class="entry-date date published updated"><time datetime="2016-04-24T13:57:25+08:00">April 24, 2016</time></span></span>
         
         <span class="author vcard"><span class="fn"><a href="" title="About Aron Yu">Aron Yu</a></span></span>

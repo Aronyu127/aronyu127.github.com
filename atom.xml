@@ -4,11 +4,11 @@
   <title><![CDATA[Aron'S Daily]]></title>
   <link href="http://aronyu127.github.io/atom.xml" rel="self"/>
   <link href="http://aronyu127.github.io/"/>
-  <updated>2016-04-24T14:14:43+08:00</updated>
+  <updated>2016-04-24T17:05:14+08:00</updated>
   <id>http://aronyu127.github.io/</id>
   <author>
     <name><![CDATA[Aron Yu]]></name>
-    
+    <email><![CDATA[h093564938@hotmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
@@ -18,7 +18,60 @@
     <link href="http://aronyu127.github.io/blog/2016/04/24/xue-xi-ji-lu-%5B%3F%5D/"/>
     <updated>2016-04-24T13:57:25+08:00</updated>
     <id>http://aronyu127.github.io/blog/2016/04/24/xue-xi-ji-lu-[?]</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<h2>Ruby</h2>
+
+<h3><mark>.underscore</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>'ActiveModel'.underscore         # =&gt; "active_model"
+</span><span class='line'>
+</span><span class='line'>'ActiveModel::Errors'.underscore # =&gt; "active_model/errors"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>對 <strong>string</strong> 使用</p>
+
+<p>用於切換 檔名  與路徑</p>
+
+<h3><mark>.fetch</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
+</span><span class='line'>h.fetch("a")                            #=&gt; 100
+</span><span class='line'>h.fetch("z", "go fish")                 #=&gt; "go fish"
+</span><span class='line'>
+</span><span class='line'>h.fetch("z") { |el| "go fish, #{el}"}   #=&gt; "go fish, z"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>對 <strong>hash</strong> 使用</p>
+
+<p>抓出hash裡面的值  如果沒有就報錯   如果沒有但有給default
+回報default 的值
+如果沒有 但有定義後面的 code block 把搜尋的值 塞進去</p>
+
+<h2>Factroyfirl</h2>
+
+<h3><mark>sequence</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>FactoryGirl.define do
+</span><span class='line'>  sequence :email do |n|
+</span><span class='line'>    "person#{n}@example.com"
+</span><span class='line'>  end
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>用於產生序列化的變數
+使用上要好於使用隨機數字-> 不會重複</p>
 ]]></content>
   </entry>
   

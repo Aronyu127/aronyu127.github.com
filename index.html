@@ -76,18 +76,18 @@
 			<a href="#">About</a>
 			<ul class="dl-submenu">
 				<li>
-					<img src="" alt="Aron Yu photo" class="author-photo">
+					<img src="/images/avatar.jpg" alt="Aron Yu photo" class="author-photo">
 					<h4>Aron Yu</h4>
-					<p></p>
+					<p>Web Developer, Rubyist</p>
 				</li>
 				
-				
+				<li>
+					<a href="mailto:h093564938@hotmail.com"><i class="fa fa-envelope"></i> Email</a>
+				</li>
 				<li>
 					<a href="https://twitter.com/h0935674938"><i class="fa fa-twitter"></i> Twitter</a>
 				</li>
-				<li>
-					<a href="https://plus.google.com/aron791227"><i class="fa fa-google-plus"></i> Google+</a>
-				</li>
+				
 				<li>
 					<a href="https://github.com/aronyu127"><i class="fa fa-github"></i> GitHub</a>
 				</li>
@@ -116,7 +116,7 @@
     <div class="header-title">
       <div class="header-title-wrap">
         <h1>Aron'S Daily</h1>
-        <h2>Learning web development from 2015 Nov.</h2>
+        <h2>learning from zero.</h2>
       </div><!-- /.header-title-wrap -->
     </div><!-- /.header-title -->
   </div><!-- /.entry-header -->
@@ -155,7 +155,60 @@
 </header>
 
 <div class="entry-content">
-  
+  <h2>Ruby</h2>
+
+<h3><mark>.underscore</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>'ActiveModel'.underscore         # =&gt; "active_model"
+</span><span class='line'>
+</span><span class='line'>'ActiveModel::Errors'.underscore # =&gt; "active_model/errors"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>對 <strong>string</strong> 使用</p>
+
+<p>用於切換 檔名  與路徑</p>
+
+<h3><mark>.fetch</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
+</span><span class='line'>h.fetch("a")                            #=&gt; 100
+</span><span class='line'>h.fetch("z", "go fish")                 #=&gt; "go fish"
+</span><span class='line'>
+</span><span class='line'>h.fetch("z") { |el| "go fish, #{el}"}   #=&gt; "go fish, z"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>對 <strong>hash</strong> 使用</p>
+
+<p>抓出hash裡面的值  如果沒有就報錯   如果沒有但有給default
+回報default 的值
+如果沒有 但有定義後面的 code block 把搜尋的值 塞進去</p>
+
+<h2>Factroyfirl</h2>
+
+<h3><mark>sequence</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>FactoryGirl.define do
+</span><span class='line'>  sequence :email do |n|
+</span><span class='line'>    "person#{n}@example.com"
+</span><span class='line'>  end
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>用於產生序列化的變數
+使用上要好於使用隨機數字-> 不會重複</p>
 
   
   
